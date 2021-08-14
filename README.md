@@ -7,7 +7,7 @@ Here are some ideas to get you started:
 -->
 
 
-- 🔭 I’m currently working on a the [Blue Witness Project](https://github.com/Lambda-School-Labs/human-rights-first-police-ds-a) and a whole-istic wellness project
+- 🔭 I’m currently working on the [Blue Witness Project](https://github.com/Lambda-School-Labs/human-rights-first-police-ds-a) and a whole-istic wellness project
 - 🌱 I’m currently expading and utilizing my knowledge on Python and SQL (Programming Languages),Machine Learning, Predictive Modeling, Data Visualization, 
 Data Storytelling, Natural Language Processing, and Neural Networks.
 - 👯 I’m looking to collaborate on Data Science and Computer Science
