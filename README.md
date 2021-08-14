@@ -10,8 +10,8 @@ Here are some ideas to get you started:
 - 🔭 I’m currently working on a the [Blue Witness Project](https://github.com/Lambda-School-Labs/human-rights-first-police-ds-a) and a whole-istic wellness project
 - 🌱 I’m currently learning Python and SQL (Programming Languages),Machine Learning, Predictive Modeling, Data Visualization, 
 Data Storytelling, Natural Language Processing, and Neural Networks.
-- 👯 I’m looking to collaborate on Data Science and Computer Sciece
-- 💬 Ask me about using data to create art and vizualizations, wholistic intentional living, breathwork, mobility/flexibility modalities, the continent of Africa
+- 👯 I’m looking to collaborate on Data Science and Computer Science
+- 💬 Ask me about using data to create art and vizualizations, wholistic intentional living, breathwork, mobility/flexibility modalities, the beautiful continent of Africa
 
 
 <h3 align="left"> Connect with me:</h3>
