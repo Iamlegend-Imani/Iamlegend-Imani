@@ -61,7 +61,7 @@ Exploring the relationship between technology, recovery, mobility, behavior, and
 
 ## Connect
 
-- LinkedIn: [linkedin.com/in/imanifaith](https://www.linkedin.com/in/imanifaith)
+- LinkedIn: [linkedin.com/in/imanifaith](https://www.linkedin.com/in/imanikir/)
 
 ---
 
