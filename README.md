@@ -1,4 +1,4 @@
-<h1 align="center">Aisha Imani</h1>
+<h1 align="center">Imani Faith Kirika </h1>
 
 <h3 align="center">
 Designing at the intersection of technology, wellness, human performance, and conscious systems.
