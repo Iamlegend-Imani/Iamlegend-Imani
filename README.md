@@ -98,5 +98,5 @@ An evolving ecosystem exploring wellness, conscious living, digital experiences,
 ---
 
 <p align="center">
-<i>“Technology should support human flourishing — not disconnect us from ourselves.”</i>
+<i>“Technology should support human flourishing, not disconnect us from ourselves.”</i>
 </p>
