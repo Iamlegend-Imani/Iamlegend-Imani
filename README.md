@@ -53,6 +53,6 @@ These projects address different problems, but they share one systems-building d
 
 I am interested in leadership, advisory, fellowship, research, and build collaborations involving AI governance, strategic operations, public-interest technology, digital resilience, and human-centered systems.
 
-[LinkedIn](https://www.linkedin.com/in/imanifaith/) | [From Signal to Safeguard](https://github.com/Iamlegend-Imani/FromSignaltoSafeguard) | [AbundanceApp](https://github.com/Iamlegend-Imani/AbundanceApp)
+[LinkedIn](https://www.linkedin.com/in/imanikir/) | [From Signal to Safeguard](https://github.com/Iamlegend-Imani/FromSignaltoSafeguard) | [AbundanceApp](https://github.com/Iamlegend-Imani/AbundanceApp)
 
 > Building a future that is technologically capable, operationally accountable, and unmistakably human.
