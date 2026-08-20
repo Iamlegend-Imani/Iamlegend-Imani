@@ -28,7 +28,9 @@ These projects address different problems, but they share one systems-building d
 
 ## Professional grounding
 
-- **AI Officer Manager, Preserving Records Everywhere:** 2023 to present
+
+- **Chief Of Staff, CEO & CIO, Preserving Records Everywhere:** 2025 to Present
+- **Fractional Chief Experience Officer - Client, Product, Data, AI, Cybersecurity, Preserving Records Everywhere:** 2023 to 2025
 - **Senior Client Experience Consultant, Product, Data & Analytics, Korn Ferry:** 2018 to 2025
 - Experience spanning enterprise organizations, startups, consulting, and interdisciplinary transformation work
 
