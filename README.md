@@ -1,4 +1,4 @@
-# Hi, I am Imani-Faith Kirika
+# Hi, You can Call Me Imani
 
 ### Human Systems & Transformation Strategist | Systems Builder Polymath
 
