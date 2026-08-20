@@ -1,102 +1,58 @@
-<h1 align="center">Imani Faith Kirika</h1>
+# Hi, I am Imani-Faith Kirika
 
-<h3 align="center">
-Building at the intersection of technology, wellness, human performance, and conscious systems.
-</h3>
+### Human Systems & Transformation Strategist | Systems Builder Polymath
 
----
+**I build systems that turn complexity into clear, accountable action.**
 
-## Philosophy
+Kenyan-born and Boston-based, I am an interdisciplinary strategist and systems builder with more than 10 years of experience across AI strategy and adoption, data and analytics, product and technology, customer experience, operations, and organizational transformation.
 
-I explore how intelligence, movement, recovery, behavior, data, and technology
-can work together to support more intentional ways of living.
+My work sits where technology, human judgment, risk, and institutional action meet. I make complex systems legible, translate ambiguity into decision architecture, and build practical workflows that people can operate without depending on one person to hold everything together.
 
-My work exists at the intersection of:
+> I build the bridge rather than become the bridge.
 
-- Human Performance
-- Wellness & Recovery
-- Artificial Intelligence
-- Data & Intelligent Systems
-- Product Thinking
-- Behavioral Design
-- Embodied Living
-- Regenerative Technology
+## What I am building now
 
----
+- **AI-cyber governance:** Translating risk evidence into visible escalation logic, safeguards, named human ownership, and auditable decisions.
+- **Trust-aware public-interest technology:** Designing systems that make provenance, eligibility, uncertainty, exceptions, and review conditions explicit.
+- **Cybersecurity and digital resilience:** Deepening my practice through cybersecurity coursework and applied governance prototypes, with an emphasis on GRC, AI risk, security governance, and resilience.
+- **Human systems:** Developing frameworks through Alive Code for understanding how people, technology, work, health, and meaning interact as one operating system.
 
-## 🔭 Currently Building
+## Selected projects
 
-### Sanctuary Sanctum
-A multidisciplinary wellness ecosystem exploring intentional living, recovery, movement, nervous system regulation, and conscious digital experiences.
+| Project | What it demonstrates |
+|---|---|
+| [**From Signal to Safeguard**](https://github.com/Iamlegend-Imani/FromSignaltoSafeguard) | A public AI-cyber governance prototype that turns fictional risk evidence into human-owned escalation paths, safeguards, dissent records, and auditable decision outputs. [Launch the prototype](https://from-signal-to-safeguard.imani-kirika116.chatgpt.site). |
+| [**AbundanceApp**](https://github.com/Iamlegend-Imani/AbundanceApp) | A resource-discovery prototype designed around source provenance, verification dates, eligibility language, expiration logic, and human review. [Launch the prototype](https://theabundanceapp.base44.app). |
 
-### Wellness Systems Research
-Researching the intersection of:
-- AI-assisted wellness systems
-- mobility & recovery
-- behavior and habit design
-- nervous system regulation
-- embodied intelligence
-- intentional living frameworks
+These projects address different problems, but they share one systems-building discipline: make evidence quality, decision criteria, ownership, exceptions, and review conditions visible.
 
-### Data & Intelligent Systems
-Building and experimenting with:
-- machine learning workflows
-- human-centered AI experiences
-- intelligent wellness tooling
-- data storytelling systems
-- interdisciplinary digital ecosystems
+## Professional grounding
 
----
+- **AI Officer Manager, Preserving Records Everywhere:** 2023 to present
+- **Senior Client Experience Consultant, Product, Data & Analytics, Korn Ferry:** 2018 to 2025
+- Experience spanning enterprise organizations, startups, consulting, and interdisciplinary transformation work
 
-## 🌱 Current Areas of Exploration
+## My working toolkit
 
-- Artificial Intelligence
-- Human Performance Systems
-- Conscious Technology
-- Wellness Technology
-- Behavioral Design
-- Bioadaptive Systems
-- Embodied Cognition
-- Recovery & Mobility
-- Data Storytelling
+| Area | Focus |
+|---|---|
+| **AI and governance** | AI adoption, human-in-the-loop decision design, risk framing, governance workflows, responsible automation, and change adoption |
+| **Data and product** | Python, SQL, analytics, machine-learning and NLP foundations, data visualization, product strategy, and evidence synthesis |
+| **Transformation** | Operating models, decision workflows, customer experience, cross-functional facilitation, program delivery, and executive storytelling |
+| **Cybersecurity and resilience** | GRC foundations, security-risk thinking, controls, escalation design, provenance, auditability, and digital resilience |
 
----
+## How I think
 
-## ⚙️ Tech & Research Areas
+- Nothing exists in isolation.
+- Evidence should be visible before certainty is claimed.
+- Human accountability cannot be automated away.
+- Good systems make ownership, exceptions, and review conditions explicit.
+- The best bridge is one people can use without needing the builder to carry them across.
 
-### Languages
-Python • SQL • R
+## Let us connect
 
-### AI / Data
-Machine Learning • NLP • Predictive Modeling • Neural Networks • Data Visualization • Data Storytelling
+I am interested in leadership, advisory, fellowship, research, and build collaborations involving AI governance, strategic operations, public-interest technology, digital resilience, and human-centered systems.
 
-### Backend & Infrastructure
-FastAPI • Flask • Docker • PostgreSQL • AWS • Google Cloud
+[LinkedIn](https://www.linkedin.com/in/imanifaith/) | [From Signal to Safeguard](https://github.com/Iamlegend-Imani/FromSignaltoSafeguard) | [AbundanceApp](https://github.com/Iamlegend-Imani/AbundanceApp)
 
-### Tools
-Git • GitHub • VS Code • Jupyter Notebook
-
----
-
-## 🧠 Selected Projects
-
-### Blue Witness Project
-Human-centered data work supporting accountability and justice initiatives.
-
-### Wellness Systems Research
-Exploring the relationship between technology, recovery, movement, behavior, and intentional living.
-
-### Sanctuary Sanctum
-An evolving ecosystem exploring wellness, conscious living, digital experiences, and human flourishing.
-
----
-
-## 🤝 Connect
-
-- LinkedIn: [linkedin.com/in/imanikir](https://www.linkedin.com/in/imanikir/)
-
----
-
-<p align="center">
-<i>“Technology should support human flourishing, not disconnect us from ourselves.”</i>
-</p>
+> Building a future that is technologically capable, operationally accountable, and unmistakably human.
