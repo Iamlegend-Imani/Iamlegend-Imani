@@ -4,7 +4,7 @@
 
 **I build systems that turn complexity into clear, accountable action.**
 
-Kenyan-born and Boston-based, I am an interdisciplinary strategist and systems builder with more than 10 years of experience across AI strategy and adoption, data and analytics, product and technology, customer experience, operations, and organizational transformation.
+I am an interdisciplinary strategist and systems builder with more than 10 years of experience across AI strategy and adoption, data and analytics, product and technology, customer experience, operations, and organizational transformation.
 
 My work sits where technology, human judgment, risk, and institutional action meet. I make complex systems legible, translate ambiguity into decision architecture, and build practical workflows that people can operate without depending on one person to hold everything together.
 
