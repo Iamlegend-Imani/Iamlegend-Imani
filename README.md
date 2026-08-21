@@ -10,17 +10,11 @@ My work is grounded in one central idea:
 
 > **Nothing exists in isolation.**
 
-Technology affects behavior.  
-Behavior affects health.  
-Health affects capacity.  
-Capacity affects work.  
-Institutions affect access.  
-Context affects decisions.  
-And the systems we build ultimately shape the lives people are able to live.
-
+Technology affects behavior.  Behavior affects health.  Health affects capacity.  Capacity affects work.  Institutions affect access.  
+Context affects decisions.  And the systems we build ultimately shape the lives people are able to live.
 I build at those intersections.
 
-Rather than treating technology, health, identity, organizations, risk, performance, and human experience as separate problems, I explore the systems connecting them — and build frameworks, products, and decision architectures that make those relationships visible.
+Rather than treating technology, health, identity, organizations, risk, performance, and human experience as separate problems, I explore the systems connecting them  and build frameworks, products, and decision architectures that make those relationships visible.
 
 > **I build the bridge rather than become the bridge.**
 
