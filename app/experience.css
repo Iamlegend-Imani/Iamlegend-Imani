@@ -134,6 +134,11 @@ nav .contactTrigger.contactNav {
 .connectLinks .contactTrigger.primaryAction { background: var(--gold); border-color: var(--gold); color: #151515; }
 .contactTrigger:hover { border-color: var(--gold); }
 
+.mobileNavStrip,
+.contactPortalMobileClose {
+  display: none;
+}
+
 .contactPortalBackdrop {
   position: fixed;
   inset: 0;
@@ -197,16 +202,128 @@ nav .contactTrigger.contactNav {
 .contactPortalOptions strong { font-weight: 500; }
 .contactPortalOptions em { color: var(--gold); font-style: normal; }
 
+@media (min-width: 801px) and (max-width: 1100px) {
+  .topbar { padding-inline: 26px; }
+  nav { gap: 14px; }
+  nav > a { font-size: .65rem; }
+  nav .contactTrigger.contactNav { padding: 7px 11px; font-size: .65rem; }
+  .themeToggle { padding: 8px 10px; }
+}
+
 @media (max-width: 800px) {
-  nav .contactTrigger.contactNav { display: inline-block; }
-  .contactPortal { padding: 24px 20px; border-radius: 48px 18px 48px 18px; }
-  .contactPortalEyebrow { margin-top: 40px; }
-  .contactPortalOptions { grid-template-columns: 1fr; }
-  .energySegment button { padding: 9px 6px; }
+  html { scroll-padding-top: 116px; }
+
+  .topbar {
+    min-height: 64px;
+    padding: 0 16px;
+  }
+  nav { gap: 8px; }
+  nav .contactTrigger.contactNav { display: inline-block; padding: 7px 10px; }
+
+  .mobileNavStrip {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 8px 14px 10px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    background: color-mix(in srgb, var(--bg) 90%, transparent);
+    backdrop-filter: blur(18px);
+    scrollbar-width: none;
+  }
+  .mobileNavStrip::-webkit-scrollbar { display: none; }
+  .mobileNavStrip a {
+    flex: 1 0 auto;
+    min-height: 36px;
+    padding: 9px 13px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--body);
+    font-size: .69rem;
+    letter-spacing: .04em;
+    white-space: nowrap;
+  }
+  .mobileNavStrip a:active { border-color: var(--gold); color: var(--gold); }
+
+  .hero { padding-top: 142px; }
+
+  .atmospherePanel {
+    position: fixed;
+    top: 116px;
+    left: 12px;
+    right: 12px;
+    width: auto;
+    max-height: calc(100dvh - 132px);
+    overflow-y: auto;
+    border-radius: 26px;
+  }
+
+  .contactPortalBackdrop {
+    align-items: end;
+    justify-items: stretch;
+    padding: 0;
+    background: rgba(4, 7, 6, .58);
+    backdrop-filter: blur(13px);
+  }
+  .contactPortal {
+    width: 100%;
+    max-height: calc(100dvh - 8px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 24px 20px calc(90px + env(safe-area-inset-bottom));
+    border-radius: 34px 34px 0 0;
+    border-bottom: 0;
+    -webkit-overflow-scrolling: touch;
+  }
+  .contactPortalDesktopClose { display: none; }
+  .contactPortalEyebrow { margin-top: 34px; }
+  .contactPortal h2 { font-size: clamp(2.55rem, 11vw, 4rem); }
+  .contactPortalIntro { font-size: .92rem; }
+  .contactPortalOptions { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: 22px; }
+  .contactPortalOptions a,
+  .contactPortalOptions button {
+    min-height: 88px;
+    padding: 14px;
+    grid-template-columns: 24px 1fr auto;
+    gap: 7px;
+    border-radius: 22px !important;
+  }
+  .contactPortalOptions strong { font-size: .86rem; line-height: 1.25; }
+  .contactPortalMobileClose {
+    position: fixed;
+    right: 16px;
+    bottom: calc(16px + env(safe-area-inset-bottom));
+    z-index: 6000;
+    width: 54px;
+    height: 54px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    background: var(--gold);
+    color: #171717;
+    box-shadow: 0 12px 38px rgba(0,0,0,.36);
+    cursor: pointer;
+    font-size: 1.55rem;
+    line-height: 1;
+  }
+
+  .projectPanel { min-height: 0; }
+  .studioPanel { min-height: 0; }
 }
 
 @media (max-width: 520px) {
-  nav .contactTrigger.contactNav { padding: 7px 10px; }
-  .contactPortalBackdrop { padding: 10px; }
-  .contactPortal h2 { font-size: 2.75rem; }
+  .mobileNavStrip { gap: 6px; padding-inline: 10px; }
+  .mobileNavStrip a { padding-inline: 11px; font-size: .64rem; }
+  .contactPortalOptions { grid-template-columns: 1fr; }
+  .contactPortalOptions a,
+  .contactPortalOptions button { min-height: 74px; }
+  .contactPortal h2 { font-size: 2.72rem; }
 }
