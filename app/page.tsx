@@ -2,6 +2,7 @@ import ThemeToggle from '@/components/ThemeToggle';
 import ProjectExplorer from '@/components/ProjectExplorer';
 import StudioTabs from '@/components/StudioTabs';
 import ContactPortal from '@/components/ContactPortal';
+import MobileDock from '@/components/MobileDock';
 
 const linkedin = 'https://www.linkedin.com/in/imanikir/';
 const github = 'https://github.com/Iamlegend-Imani';
@@ -44,7 +45,7 @@ export default function Home() {
         <a className="wordmark" href={linkedin} target="_blank" rel="noreferrer" aria-label="Imani on LinkedIn">
           Imani<span className="wordmarkMark">↗</span>
         </a>
-        <nav aria-label="Primary navigation">
+        <nav className="desktopNav" aria-label="Primary navigation">
           <a href="#thesis">Thesis</a>
           <a href="#work">Work</a>
           <a href="#architecture">Architecture</a>
@@ -53,6 +54,8 @@ export default function Home() {
           <ThemeToggle />
         </nav>
       </header>
+
+      <MobileDock />
 
       <section className="hero" id="top">
         <div className="heroBloom bloomOne" aria-hidden="true" />
