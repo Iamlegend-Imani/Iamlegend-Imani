@@ -1,0 +1,212 @@
+:root {
+  --screen-tint: 0, 0, 0;
+  --screen-overlay: 0;
+  --pulse-duration: 13s;
+  --pulse-scale: 1.032;
+  --pulse-drift: 11px;
+  --energy-primary: var(--teal);
+  --energy-secondary: var(--gold);
+  --energy-tertiary: var(--rose);
+}
+
+:root[data-energy='grounded'] {
+  --energy-primary: #32645c;
+  --energy-secondary: var(--gold);
+  --energy-tertiary: #725f55;
+}
+
+:root[data-energy='electric'] {
+  --energy-primary: #3c9c99;
+  --energy-secondary: #8da6ff;
+  --energy-tertiary: #7f6fd4;
+}
+
+:root[data-energy='radiant'] {
+  --energy-primary: #c38368;
+  --energy-secondary: #e4b94d;
+  --energy-tertiary: #b06e75;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  pointer-events: none;
+  background: rgba(var(--screen-tint), var(--screen-overlay));
+  transition: background .18s ease;
+}
+
+main::after {
+  content: '';
+  position: fixed;
+  inset: 12vh auto auto -16vw;
+  width: 62vw;
+  height: 62vw;
+  border-radius: 57% 43% 37% 63% / 44% 59% 41% 56%;
+  background: radial-gradient(circle at 52% 44%, color-mix(in srgb, var(--energy-primary) 27%, transparent), color-mix(in srgb, var(--energy-tertiary) 8%, transparent) 47%, transparent 70%);
+  opacity: calc(var(--ambient-strength) * .23);
+  pointer-events: none;
+  z-index: 0;
+  animation: atmosphereDrift var(--pulse-duration) ease-in-out infinite alternate;
+}
+
+.heroBloom,
+.connectBloom,
+.projectHalo,
+main::before {
+  animation: atmosphereDrift var(--pulse-duration) ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+.bloomOne {
+  background: radial-gradient(circle at 35% 35%, color-mix(in srgb, var(--energy-secondary) 28%, transparent), color-mix(in srgb, var(--energy-tertiary) 13%, transparent) 44%, transparent 70%);
+}
+
+.bloomTwo,
+.projectHalo {
+  background: radial-gradient(circle, color-mix(in srgb, var(--energy-primary) 31%, transparent), transparent 68%);
+}
+
+.connectBloom {
+  background: radial-gradient(circle at 40% 40%, color-mix(in srgb, var(--energy-tertiary) 24%, transparent), color-mix(in srgb, var(--energy-secondary) 16%, transparent) 42%, transparent 70%);
+}
+
+.heroArc {
+  border-color: color-mix(in srgb, var(--energy-secondary) 64%, transparent);
+}
+
+@keyframes atmosphereDrift {
+  from { transform: translate3d(0, 0, 0) scale(1); }
+  to { transform: translate3d(var(--pulse-drift), calc(var(--pulse-drift) * -.55), 0) scale(var(--pulse-scale)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroBloom,
+  .connectBloom,
+  .projectHalo,
+  main::before,
+  main::after { animation: none !important; }
+}
+
+.atmospherePanel { width: min(350px, calc(100vw - 32px)); }
+.atmosphereHeading > div { display: flex; flex-direction: column; gap: 2px; }
+.atmosphereHeading > div > span { font-family: Georgia, "Times New Roman", serif; font-size: 1.25rem; font-style: italic; }
+.atmosphereHeading small { color: var(--muted); font-size: .62rem; letter-spacing: .1em; text-transform: uppercase; }
+.energyLabel { margin: 17px 0 8px; color: var(--muted); font-size: .66rem; letter-spacing: .1em; text-transform: uppercase; }
+.energySegment { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.energySegment button {
+  min-width: 0;
+  padding: 10px 7px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  text-align: left;
+  transition: background .2s ease, border-color .2s ease, transform .2s ease;
+}
+.energySegment button:hover { transform: translateY(-1px); }
+.energySegment button.active { background: color-mix(in srgb, var(--energy-primary) 18%, var(--surface)); border-color: color-mix(in srgb, var(--energy-primary) 65%, var(--line)); color: var(--text); }
+.energySegment span { display: block; font-size: .69rem; }
+.energySegment small { display: block; margin-top: 3px; color: var(--muted); font-size: .55rem; }
+.atmosphereSlider input { height: 18px; }
+
+.contactTrigger {
+  appearance: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  padding: 12px 16px;
+  cursor: pointer;
+  font-size: .8rem;
+}
+nav .contactTrigger.contactNav {
+  padding: 8px 13px;
+  border-color: var(--gold);
+  color: var(--gold);
+  font-size: .7rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.heroActions .contactTrigger { color: var(--text); }
+.connectLinks .contactTrigger.primaryAction { background: var(--gold); border-color: var(--gold); color: #151515; }
+.contactTrigger:hover { border-color: var(--gold); }
+
+.contactPortalBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 5000;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  background: rgba(4, 7, 6, .68);
+  backdrop-filter: blur(16px);
+}
+.contactPortal {
+  position: relative;
+  width: min(720px, 100%);
+  overflow: hidden;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 72px 28px 72px 28px;
+  background: color-mix(in srgb, var(--surface) 93%, transparent);
+  color: var(--text);
+  box-shadow: 0 34px 100px rgba(0,0,0,.38);
+}
+.contactPortalGlow {
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  right: -110px;
+  top: -120px;
+  border-radius: 58% 42% 63% 37% / 40% 58% 42% 60%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--energy-primary) 31%, transparent), color-mix(in srgb, var(--energy-secondary) 12%, transparent) 45%, transparent 68%);
+  opacity: var(--ambient-strength);
+  animation: atmosphereDrift var(--pulse-duration) ease-in-out infinite alternate;
+  pointer-events: none;
+}
+.contactPortalTop { position: relative; z-index: 1; display: flex; align-items: center; justify-content: space-between; color: var(--muted); font-size: .64rem; letter-spacing: .12em; text-transform: uppercase; }
+.contactPortalTop button { border: 0; background: transparent; color: var(--text); cursor: pointer; font-size: 1.5rem; }
+.contactPortalEyebrow { position: relative; z-index: 1; margin: 56px 0 14px; color: var(--gold); font-size: .64rem; letter-spacing: .16em; }
+.contactPortal h2 { position: relative; z-index: 1; max-width: 590px; margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.7rem, 6vw, 5.5rem); font-weight: 400; line-height: .94; letter-spacing: -.045em; }
+.contactPortalIntro { position: relative; z-index: 1; max-width: 560px; color: var(--body); line-height: 1.6; }
+.contactPortalOptions { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(2, 1fr); gap: 9px; margin-top: 28px; }
+.contactPortalOptions a,
+.contactPortalOptions button {
+  min-height: 92px;
+  padding: 17px;
+  display: grid;
+  grid-template-columns: 30px 1fr auto;
+  gap: 10px;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  background: color-mix(in srgb, var(--bg) var(--surface-opacity), transparent);
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color .2s ease, transform .2s ease, background .2s ease;
+}
+.contactPortalOptions a:nth-child(1), .contactPortalOptions button:nth-child(4) { border-radius: 38px 14px 38px 14px; }
+.contactPortalOptions a:nth-child(2), .contactPortalOptions a:nth-child(3) { border-radius: 14px 38px 14px 38px; }
+.contactPortalOptions a:hover,
+.contactPortalOptions button:hover { border-color: var(--energy-secondary); transform: translateY(-2px); background: color-mix(in srgb, var(--surface-2) var(--surface-opacity), transparent); }
+.contactPortalOptions span { color: var(--gold); font-size: .62rem; }
+.contactPortalOptions strong { font-weight: 500; }
+.contactPortalOptions em { color: var(--gold); font-style: normal; }
+
+@media (max-width: 800px) {
+  nav .contactTrigger.contactNav { display: inline-block; }
+  .contactPortal { padding: 24px 20px; border-radius: 48px 18px 48px 18px; }
+  .contactPortalEyebrow { margin-top: 40px; }
+  .contactPortalOptions { grid-template-columns: 1fr; }
+  .energySegment button { padding: 9px 6px; }
+}
+
+@media (max-width: 520px) {
+  nav .contactTrigger.contactNav { padding: 7px 10px; }
+  .contactPortalBackdrop { padding: 10px; }
+  .contactPortal h2 { font-size: 2.75rem; }
+}
