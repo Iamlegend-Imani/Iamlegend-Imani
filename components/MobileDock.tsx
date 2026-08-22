@@ -5,7 +5,7 @@ import ContactPortal from './ContactPortal';
 const links = [
   { label: 'Thesis', href: '#thesis' },
   { label: 'Work', href: '#work' },
-  { label: 'Architecture', short: 'Map', href: '#architecture' },
+  { label: 'Architecture', short: 'Arch.', href: '#architecture' },
   { label: 'Studio', href: '#studio' },
 ] as const;
 
