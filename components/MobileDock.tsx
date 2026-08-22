@@ -15,7 +15,7 @@ export default function MobileDock() {
       {links.map((link) => (
         <a key={link.label} href={link.href} aria-label={link.label}>
           <span className="mobileDockDot" aria-hidden="true" />
-          <span>{link.short ?? link.label}</span>
+          <span>{'short' in link ? link.short : link.label}</span>
         </a>
       ))}
       <ContactPortal label="Contact" className="mobileDockContact" />
