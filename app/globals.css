@@ -1,0 +1,133 @@
+:root {
+  --bg: #08090b;
+  --panel: #111318;
+  --panel-soft: #161922;
+  --text: #f4f1e8;
+  --muted: #a8abb4;
+  --line: rgba(255,255,255,.12);
+  --accent: #a8ffcf;
+  --accent-soft: rgba(168,255,207,.12);
+  --glow: rgba(114,158,255,.18);
+}
+
+:root[data-theme='light'] {
+  --bg: #f3f0e8;
+  --panel: #ffffff;
+  --panel-soft: #e9e6de;
+  --text: #111216;
+  --muted: #5f626a;
+  --line: rgba(0,0,0,.13);
+  --accent: #0d6f55;
+  --accent-soft: rgba(13,111,85,.1);
+  --glow: rgba(79,92,255,.12);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; background: var(--bg); }
+body { margin: 0; background: var(--bg); color: var(--text); font-family: Arial, Helvetica, sans-serif; transition: background .25s ease, color .25s ease; }
+a { color: inherit; text-decoration: none; }
+main { overflow: hidden; }
+
+.topbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 30;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 34px; border-bottom: 1px solid var(--line);
+  background: color-mix(in srgb, var(--bg) 82%, transparent); backdrop-filter: blur(18px);
+}
+.wordmark { font-weight: 800; letter-spacing: -.04em; font-size: 20px; }
+.wordmark span { color: var(--accent); padding-left: 4px; font-size: 10px; vertical-align: 3px; }
+nav { display: flex; gap: 24px; align-items: center; font-size: 13px; }
+nav > a { color: var(--muted); transition: color .2s; }
+nav > a:hover { color: var(--text); }
+.themeToggle { border: 1px solid var(--line); background: transparent; color: var(--text); padding: 9px 12px; border-radius: 999px; display: inline-flex; gap: 8px; align-items: center; cursor: pointer; }
+.themeDot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 12px var(--accent); }
+
+.hero { min-height: 100vh; padding: 155px 7vw 72px; position: relative; display: flex; flex-direction: column; justify-content: center; border-bottom: 1px solid var(--line); }
+.eyebrow, .sectionNumber, .closingKicker { font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
+.hero h1 { font-size: clamp(3.4rem, 8.5vw, 8.2rem); line-height: .91; letter-spacing: -.065em; max-width: 1200px; margin: 32px 0 55px; position: relative; z-index: 2; }
+.heroGrid { display: grid; grid-template-columns: 1.35fr .65fr; gap: 10vw; max-width: 1100px; position: relative; z-index: 2; }
+.lede { font-size: clamp(1.25rem, 2.2vw, 2rem); line-height: 1.32; margin: 0; }
+.heroNote { color: var(--muted); line-height: 1.65; margin: 0; align-self: end; }
+.heroActions { display: flex; gap: 12px; margin-top: 40px; position: relative; z-index: 2; }
+.primary, .secondary { padding: 14px 18px; border-radius: 999px; font-size: 14px; border: 1px solid var(--line); }
+.primary { background: var(--text); color: var(--bg); }
+.secondary { background: transparent; }
+.orb { position: absolute; border-radius: 50%; filter: blur(2px); pointer-events: none; }
+.orbOne { width: 390px; height: 390px; right: -80px; top: 18%; background: radial-gradient(circle at 35% 30%, var(--accent-soft), transparent 68%); border: 1px solid var(--line); }
+.orbTwo { width: 210px; height: 210px; right: 18%; bottom: 8%; background: radial-gradient(circle, var(--glow), transparent 70%); }
+
+.statement, .territories, .work, .systemsMap, .principles, .about, .closing { padding: 110px 7vw; border-bottom: 1px solid var(--line); }
+.giantQuote { font-size: clamp(3rem, 7.4vw, 7.5rem); line-height: .95; letter-spacing: -.055em; margin: 54px 0 65px; max-width: 1000px; }
+.statementBody { display: grid; grid-template-columns: 1fr 1fr; gap: 8vw; max-width: 980px; margin-left: auto; }
+.statementBody p { font-size: 1.15rem; line-height: 1.7; margin: 0; color: var(--muted); }
+
+.sectionIntro { display: grid; grid-template-columns: .7fr 1.3fr; gap: 4vw; margin-bottom: 65px; }
+.sectionIntro h2, .about h2 { font-size: clamp(2.7rem, 5vw, 5.3rem); letter-spacing: -.05em; line-height: .96; margin: 0; }
+.territoryGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.territoryCard { min-height: 280px; padding: 28px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); display: flex; flex-direction: column; }
+.territoryCard > span { color: var(--accent); font-size: 12px; }
+.territoryCard h3 { font-size: 1.8rem; max-width: 430px; margin-top: auto; margin-bottom: 16px; letter-spacing: -.03em; }
+.territoryCard p { color: var(--muted); line-height: 1.6; max-width: 500px; margin: 0; }
+
+.workIntro h2 { max-width: 850px; }
+.projectGrid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; }
+.projectCard { min-height: 390px; padding: 24px; background: var(--panel); border: 1px solid var(--line); border-radius: 18px; display: flex; flex-direction: column; justify-content: space-between; transition: transform .25s ease, background .25s ease, border-color .25s ease; }
+.projectCard:hover { transform: translateY(-5px); border-color: color-mix(in srgb, var(--accent) 55%, var(--line)); background: var(--panel-soft); }
+.projectTop { display: flex; justify-content: space-between; color: var(--muted); font-size: 12px; }
+.projectLabel { color: var(--accent) !important; font-size: 11px; letter-spacing: .11em; text-transform: uppercase; }
+.projectCard h3 { font-size: 2.15rem; letter-spacing: -.04em; margin: 10px 0 16px; }
+.projectCard p { color: var(--muted); line-height: 1.6; }
+
+.systemsMap { min-height: 720px; position: relative; display: grid; place-items: center; }
+.systemsMap > .sectionNumber { position: absolute; top: 110px; left: 7vw; }
+.mapCenter { width: 175px; height: 175px; border-radius: 50%; background: var(--text); color: var(--bg); display: grid; place-items: center; text-align: center; font-weight: 800; letter-spacing: -.02em; z-index: 3; box-shadow: 0 0 80px var(--glow); }
+.mapRing { position: absolute; border: 1px solid var(--line); border-radius: 50%; display: flex; justify-content: space-around; align-items: center; font-size: 10px; letter-spacing: .15em; color: var(--muted); }
+.mapRing span { background: var(--bg); padding: 8px; }
+.ringOne { width: 390px; height: 390px; transform: rotate(13deg); }
+.ringTwo { width: 610px; height: 610px; transform: rotate(-9deg); }
+.mapCaption { position: absolute; max-width: 330px; right: 7vw; bottom: 90px; color: var(--muted); line-height: 1.6; }
+
+.principleList { margin-top: 55px; border-top: 1px solid var(--line); }
+.principleList p { margin: 0; padding: 22px 0; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: 80px 1fr; gap: 15px; font-size: clamp(1.25rem, 2.7vw, 2.4rem); line-height: 1.2; letter-spacing: -.025em; }
+.principleList p span { color: var(--accent); font-size: 11px; letter-spacing: .1em; padding-top: 8px; }
+
+.about { display: grid; grid-template-columns: .85fr 1.15fr; gap: 10vw; }
+.about h2 { margin-top: 28px; }
+.aboutCopy > p { color: var(--muted); font-size: 1.12rem; line-height: 1.7; max-width: 650px; }
+.capabilities { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 32px; }
+.capabilities span { padding: 9px 12px; border: 1px solid var(--line); border-radius: 999px; font-size: 12px; color: var(--muted); }
+
+.closing { min-height: 80vh; display: flex; flex-direction: column; justify-content: center; }
+.closing h2 { font-size: clamp(3rem, 6.5vw, 7rem); line-height: .97; letter-spacing: -.06em; max-width: 1200px; margin: 28px 0 58px; }
+.closingLinks { display: flex; gap: 28px; }
+.closingLinks a { border-bottom: 1px solid var(--text); padding-bottom: 4px; }
+footer { padding: 26px 7vw; display: flex; justify-content: space-between; color: var(--muted); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; }
+
+@media (max-width: 900px) {
+  .topbar { padding: 16px 20px; }
+  nav { gap: 12px; }
+  nav > a { display: none; }
+  .hero { padding-left: 22px; padding-right: 22px; }
+  .heroGrid, .statementBody, .sectionIntro, .about { grid-template-columns: 1fr; }
+  .heroGrid { gap: 28px; }
+  .statement, .territories, .work, .systemsMap, .principles, .about, .closing { padding: 82px 22px; }
+  .territoryGrid, .projectGrid { grid-template-columns: 1fr; }
+  .territoryCard { min-height: 240px; }
+  .projectCard { min-height: 320px; }
+  .ringTwo { width: 430px; height: 430px; }
+  .ringOne { width: 300px; height: 300px; }
+  .systemsMap { min-height: 600px; }
+  .mapCaption { position: absolute; left: 22px; right: 22px; bottom: 45px; max-width: 100%; }
+  .systemsMap > .sectionNumber { top: 82px; left: 22px; }
+  .principleList p { grid-template-columns: 44px 1fr; }
+  footer { padding: 24px 22px; gap: 20px; }
+}
+
+@media (max-width: 560px) {
+  .hero h1 { font-size: 3.25rem; }
+  .heroActions { flex-direction: column; align-items: flex-start; }
+  .mapCenter { width: 130px; height: 130px; font-size: 13px; }
+  .ringOne { width: 250px; height: 250px; }
+  .ringTwo { width: 365px; height: 365px; }
+  .closingLinks { flex-direction: column; align-items: flex-start; }
+}
