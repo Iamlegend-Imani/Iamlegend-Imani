@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import './experience.css';
 
 export const metadata: Metadata = {
   title: 'Imani Kirika | Human Systems & Transformation Strategist',
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" suppressHydrationWarning data-theme="dark">
+    <html lang="en" suppressHydrationWarning data-theme="dark" data-energy="grounded">
       <body>{children}</body>
     </html>
   );
