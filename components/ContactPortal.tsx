@@ -22,11 +22,19 @@ export default function ContactPortal({ label = 'Contact Imani', className = '' 
 
   useEffect(() => {
     if (!open) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') setOpen(false);
     };
+
     window.addEventListener('keydown', onKeyDown);
-    return () => window.removeEventListener('keydown', onKeyDown);
+    return () => {
+      window.removeEventListener('keydown', onKeyDown);
+      document.body.style.overflow = previousOverflow;
+    };
   }, [open]);
 
   async function copyEmail() {
@@ -46,14 +54,18 @@ export default function ContactPortal({ label = 'Contact Imani', className = '' 
       </button>
 
       {open ? (
-        <div className="contactPortalBackdrop" role="presentation" onMouseDown={(event) => {
-          if (event.currentTarget === event.target) setOpen(false);
-        }}>
+        <div
+          className="contactPortalBackdrop"
+          role="presentation"
+          onMouseDown={(event) => {
+            if (event.currentTarget === event.target) setOpen(false);
+          }}
+        >
           <section className="contactPortal" role="dialog" aria-modal="true" aria-labelledby="contact-title">
             <div className="contactPortalGlow" aria-hidden="true" />
             <div className="contactPortalTop">
               <span>Open a channel</span>
-              <button type="button" onClick={() => setOpen(false)} aria-label="Close contact options">×</button>
+              <button className="contactPortalDesktopClose" type="button" onClick={() => setOpen(false)} aria-label="Close contact options">×</button>
             </div>
             <p className="contactPortalEyebrow">CONTACT IMANI</p>
             <h2 id="contact-title">Choose how you want to reach me.</h2>
@@ -81,6 +93,11 @@ export default function ContactPortal({ label = 'Contact Imani', className = '' 
                 <em>{copied ? '✓' : '＋'}</em>
               </button>
             </div>
+
+            <button className="contactPortalMobileClose" type="button" onClick={() => setOpen(false)} aria-label="Close contact options">
+              <span>Close</span>
+              <b aria-hidden="true">×</b>
+            </button>
           </section>
         </div>
       ) : null}
