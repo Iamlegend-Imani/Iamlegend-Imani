@@ -1,10 +1,10 @@
 import ThemeToggle from '@/components/ThemeToggle';
 import ProjectExplorer from '@/components/ProjectExplorer';
 import StudioTabs from '@/components/StudioTabs';
+import ContactPortal from '@/components/ContactPortal';
 
 const linkedin = 'https://www.linkedin.com/in/imanikir/';
 const github = 'https://github.com/Iamlegend-Imani';
-const contact = 'mailto:imani.kirika.me@gmail.com?subject=Let%27s%20connect';
 
 const territories = [
   {
@@ -49,7 +49,7 @@ export default function Home() {
           <a href="#work">Work</a>
           <a href="#architecture">Architecture</a>
           <a href="#studio">Studio</a>
-          <a className="contactNav" href={contact}>Contact</a>
+          <ContactPortal label="Contact" className="contactNav" />
           <ThemeToggle />
         </nav>
       </header>
@@ -71,7 +71,7 @@ export default function Home() {
             <p className="lede">I dissolve complexity, connect what appears separate, and build new realities around the human beings who have to live inside them.</p>
             <div className="heroActions">
               <a className="primaryAction" href="#work">Explore the work ↓</a>
-              <a href={contact}>Contact Imani ↗</a>
+              <ContactPortal label="Contact Imani ↗" />
             </div>
           </div>
 
@@ -188,7 +188,7 @@ export default function Home() {
         <h2>Bring me the problem that does not fit neatly inside one department.</h2>
         <p>I am open to conversations across AI and emerging technology, health technology, cybersecurity and GRC, AI governance, human systems research, strategic transformation, advisory work, fellowships, research collaborations, product partnerships, and experimental ventures.</p>
         <div className="connectLinks">
-          <a className="primaryAction" href={contact}>Contact Imani ↗</a>
+          <ContactPortal label="Contact Imani ↗" className="primaryAction" />
           <a href={linkedin} target="_blank" rel="noreferrer">Connect on LinkedIn ↗</a>
           <a href={github} target="_blank" rel="noreferrer">Explore GitHub ↗</a>
           <a href="#top">Back to top ↑</a>
