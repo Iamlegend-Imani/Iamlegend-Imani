@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import './experience.css';
-import './mobile.css';
 
 export const metadata: Metadata = {
   title: 'Imani Kirika | Human Systems & Transformation Strategist',
